@@ -690,3 +690,34 @@ int main() {
     printf("%d",cost);
     return 0;
 } */
+
+
+/*
+//Largest Permutation
+int main() {
+    int arrayLength,maxSwaps;
+    scanf("%d %d", &arrayLength,&maxSwaps);
+    int *inputArray = malloc(sizeof(int)*arrayLength);
+    int *parrallelInputArray = malloc(sizeof(int)*(arrayLength+1));
+    for(int i = 0; i < arrayLength; i++){
+        scanf("%d",&inputArray[i]);
+        parrallelInputArray[inputArray[i]]=i;
+    }
+
+    int i = 0;
+    while(maxSwaps > 0 && i < arrayLength){
+        if(inputArray[i] != arrayLength-i) {
+            inputArray[parrallelInputArray[arrayLength - i]] = inputArray[i];
+            parrallelInputArray[inputArray[i]] = parrallelInputArray[arrayLength - i];
+            inputArray[i] = arrayLength - i;
+            parrallelInputArray[arrayLength - i] = i;
+            maxSwaps--;
+        }
+        i++;
+    }
+
+    for(int i = 0; i < arrayLength; i++){
+        printf("%d ", inputArray[i]);
+    }
+    return 0;
+} */

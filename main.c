@@ -721,3 +721,42 @@ int main() {
     }
     return 0;
 } */
+
+/*
+//Common Child - https://en.wikipedia.org/wiki/Longest_common_subsequence_problem 
+int commonChild(char* s1, char* s2){
+    
+    int sizeS1 = strlen(s1);
+    int sizeS2 = strlen(s2);
+    int **test = (int**)calloc(sizeS1+1,sizeof(int*));
+    for (int i = 0; i <= sizeS1; i++){
+        test[i] = (int*)calloc(sizeS2+1,sizeof(int));
+    }
+    
+    //for(int i = 0; i < strlen(s1);i++){
+    //    for (int j = 0; j < strlen(s2); j++) {
+    //        printf("%d, ",test[i][j]);
+    //    }
+    //    printf("\n");
+    //} 
+    
+    for(int i = 0; i < sizeS1; i++) {
+        for(int j = 0; j < sizeS2; j++){
+            if (s1[i] == s2[j]){
+                test[i+1][j+1] = test[i][j]+1;
+            } else {
+                test[i+1][j+1] = max(test[i+1][j], test[i][j+1]);
+            }
+        }
+    }
+    return test[sizeS1][sizeS2];
+}
+
+int main() {
+    char* s1 = (char *)calloc(5000 , sizeof(char));
+    char* s2 = (char *)calloc(5000 , sizeof(char));
+    scanf("%s %s", s1, s2);
+    int result = commonChild(s1, s2);
+    printf("%d\n", result);
+    return 0;
+} */ 

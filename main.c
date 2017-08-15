@@ -869,3 +869,55 @@ int main() {
     free(arr);
     return 0;
 } */
+
+
+/*
+2
+3 10
+2 1 3
+7 8 9
+4 5
+1 2 2 1
+3 3 3 4
+
+// Permuting Two Arrays
+int ascendingComparator(const void *a, const void *b){
+    return *(int*)a - *(int*b);
+}
+
+int descendingComparator(const void *a, const void *b){
+    return *(int*)b - *(int*)a
+}
+
+int main() {
+    int queries;
+    scanf("%d",&queries);
+    for (int i = 0; i < queries; i++){
+        int arr_length, k;
+        scanf("%d %d", &arr_length, &k);
+        int *arr_a = malloc(sizeof(int)*arr_length);
+        int *arr_b = malloc(sizeof(int)*arr_length);
+        for(int j = 0; j < arr_length; j++){
+            scanf("%d",&arr_a[j]);
+        }
+        for(int j = 0; j < arr_length; j++){
+            scanf("%d",&arr_b[j]);
+        }
+        qsort(arr_a,arr_length,sizeof(int),ascendingComparator);
+        qsort(arr_b,arr_length,sizeof(int),descendingComparator);
+        
+        for(int j = 0; j < arr_length; j++){
+            if(arr_a[j]+arr_b[j] < k){
+                printf("NO");
+                break;
+            }
+        }
+        printf("YES");
+        
+        free(arr_a);
+        free(arr_b);
+    }
+    return 0;
+} */
+
+

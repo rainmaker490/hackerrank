@@ -1,4 +1,5 @@
 //@author: Varun Patel
+//A Very Big Sum
 #include <math.h>
 #include <stdio.h>
 #include <string.h>

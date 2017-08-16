@@ -1,4 +1,5 @@
 //@author: Varun Patel
+//Simple Array Sum
 #include <math.h>
 #include <stdio.h>
 #include <string.h>

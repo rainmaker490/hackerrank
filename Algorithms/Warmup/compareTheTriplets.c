@@ -1,4 +1,5 @@
 //@author: Varun Patel
+//Compare the Triplets
 #include <math.h>
 #include <stdio.h>
 #include <string.h>

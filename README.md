@@ -4,8 +4,8 @@
 
 ## Algorithms Track : (Current Percentile : [84th](https://www.hackerrank.com/varun4))
 
-- Warmup
-- Implementation
+- [Warmup](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Warmup)
+- [Implementation](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Implementation)
 - Strings
 - Sorting
 - Search

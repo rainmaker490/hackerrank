@@ -7,7 +7,7 @@
 - [Warmup](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Warmup)
 - [Implementation](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Implementation)
 - Strings
-- Sorting
+- [Sorting](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Sorting)
 - Search
 - Graph Theory
 - Greedy

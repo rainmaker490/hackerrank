@@ -1,5 +1,5 @@
 //@author: Varun Patel
-//Super Reduced Strings
+//Super Reduced String
 #include <math.h>
 #include <stdio.h>
 #include <string.h>

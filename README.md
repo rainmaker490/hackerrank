@@ -11,7 +11,7 @@
 - Search
 - Graph Theory
 - Greedy
-- Dynamic Programming
+- [Dynamic Programming](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Dynamic%20Programming)
 - Constructive Algorithms
 - Bit Manipulation
 - Recursion

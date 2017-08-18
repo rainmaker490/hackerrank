@@ -9,7 +9,7 @@
 - Strings
 - [Sorting](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Sorting)
 - Search
-- Graph Theory
+- [Graph Theory](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Graph%20Theory)
 - Greedy
 - [Dynamic Programming](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Dynamic%20Programming)
 - Constructive Algorithms

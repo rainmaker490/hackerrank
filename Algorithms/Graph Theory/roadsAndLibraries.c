@@ -31,12 +31,12 @@ void insert(int city, struct Vertex **head, struct Vertex **tail) {
     }
     
     /*
-     struct Vertex *current = *head;
-     //printf("Head %d", head->edge);
-     while (current->next != NULL){
-     current = current->next;
-     }
-     */
+    struct Vertex *current = *head;
+    //printf("Head %d", head->edge);
+    while (current->next != NULL){
+        current = current->next;
+    } */
+     
     struct Vertex *currentTail = *tail;
     currentTail->next = newVertex;
     *tail = newVertex;

@@ -7,6 +7,7 @@
 #include <assert.h>
 #include <limits.h>
 #include <stdbool.h>
+#include <limits.h>
 
 /* Algorithm / Example :
 2 (7) 7 7 7 7
@@ -28,6 +29,7 @@
 2 2 3 7 
  */
 
+//Wrong:
 int getMinimumIterations(int *distributedCandies, int index, int arrayLength,int *rightOffset) {
     //printf("%d",index);
     printf("\n");
@@ -80,6 +82,21 @@ int getMinimumIterations(int *distributedCandies, int index, int arrayLength,int
     return iterations;
 }
 
+//Correct:
+int getMinIterations(int *distributedCandies, int array_size, int minIndex) {
+    int sum = INT_MAX;
+    for(int i = 0; i < 3; i++) {
+        int current = 0;
+        for(int j = 0; j < array_size; j++) {
+            int delta = distributedCandies[j] - distributedCandies[minIndex] + i;
+            current += delta / 5 + delta % 5 / 2 + delta % 5 % 2 / 1;
+        }
+        sum = current < sum ? current : sum;
+    }
+    
+    return sum;
+}
+
 int main() {
     int queries;
     scanf("%d",&queries);
@@ -87,14 +104,19 @@ int main() {
         int arrayLength;
         scanf("%d", &arrayLength);
         int *distributedCandies = malloc(arrayLength*sizeof(int));
+        
+        int minIndex = 0;
         for(int j = 0; j < arrayLength; j++){
             scanf("%d",&distributedCandies[j]);
+            if (distributedCandies[minIndex] > distributedCandies[j]) {
+                minIndex = j;
+            }
         }
         int rightOffset = 0;
-        int minimumIterations = getMinimumIterations(distributedCandies,1,arrayLength, &rightOffset);
+        //int minimumIterations = getMinimumIterations(distributedCandies,1,arrayLength, &rightOffset);
+        int minimumIterations = getMinIterations(distributedCandies,arrayLength,minIndex);
         printf("%d\n",minimumIterations);
         free(distributedCandies);
     }
     return 0;
 }
-

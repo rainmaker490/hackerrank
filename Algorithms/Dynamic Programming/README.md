@@ -1,6 +1,6 @@
 # Dynamic Programming Solutions by Varun Patel
 ###### [Hackerrank Varun Patel Public Profile](https://www.hackerrank.com/varun4)
-[![N|Solid](https://i.ytimg.com/vi/P8Xa2BitN3I/maxresdefault.jpg)](https://www.hackerrank.com/varun4)
+[![N|Solid](https://d3keuzeb2crhkn.cloudfront.net/hackerrank/assets/brand/wordmark_sm.svg)](https://www.hackerrank.com/varun4)
 
 ## Algorithms: (Current Percentile : [84th](https://www.hackerrank.com/varun4))
 

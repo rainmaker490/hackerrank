@@ -5,12 +5,12 @@
 
 long getWays(long n, int c_size, long int* c, NSMutableDictionary **memo){
     /* Debug
-     for (int i = 0; i < c_size; i++){
-     printf("%li, ",c[i]);
-     }
-     printf("N: %li ",n);
-     printf("\n");
-     */
+    for (int i = 0; i < c_size; i++){
+        printf("%li, ",c[i]);
+    }
+    printf("N: %li ",n);
+    printf("\n");
+    */
     NSString *key = [NSString stringWithFormat:@"%ld - %i",n,c_size];
     if ([*memo objectForKey:key]){
         //Debug: NSLog(@"%ld",[[*memo objectForKey:key] longLongValue]);

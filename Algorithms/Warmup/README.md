@@ -1,6 +1,5 @@
 # Algorithms Solutions by Varun Patel
 ###### [Hackerrank Varun Patel Public Profile](https://www.hackerrank.com/varun4)
-[![N|Solid](https://hrcdn.net/hackerrank/assets/badges/badge-algo.png)](https://www.hackerrank.com/varun4)
 
 ## Algorithms: (Current Percentile : [84th](https://www.hackerrank.com/varun4))
 

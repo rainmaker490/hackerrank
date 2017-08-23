@@ -1,5 +1,5 @@
 //@author: Varun Patel
-//The Coin Change Problem
+//Abbreviation
 //Objective C Solution
 #import <Foundation/Foundation.h>
 

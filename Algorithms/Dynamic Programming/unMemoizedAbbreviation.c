@@ -26,7 +26,7 @@ bool dpAbbreviation(char* a, char*b, int indexA, int indexB) {
     if (indexA <= strlen(a) && indexB == strlen(b)) {
         for (int i = indexA; i < strlen(a); i++){
             if (isupper(a[i])){
-                printf("1\n");
+                //printf("1\n");
                 return false;
             }
         }
@@ -34,7 +34,7 @@ bool dpAbbreviation(char* a, char*b, int indexA, int indexB) {
     }
     
     if (indexA == strlen(a) && indexB < strlen(b)) {
-        printf("2\n");
+        //printf("2\n");
         return false;
     }
     
@@ -70,6 +70,8 @@ int main() {
         bool result = abbreviation(a, b);
         printf(!result ? "NO" : "YES");
         printf("\n");
+        free(a);
+        free(b);
     }
     return 0;
 }

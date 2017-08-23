@@ -11,12 +11,12 @@
 
 long getWays(long n, int c_size, long int* c){
     /* Debug
-     for (int i = 0; i < c_size; i++){
-     printf("%li, ",c[i]);
-     }
-     printf("N: %li ",n);
-     printf("\n");
-     */
+    for (int i = 0; i < c_size; i++){
+        printf("%li, ",c[i]);
+    }
+    printf("N: %li ",n);
+    printf("\n");
+    */
     if (n == 0) {
         return 1;
     }

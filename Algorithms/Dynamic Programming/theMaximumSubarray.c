@@ -20,9 +20,17 @@
 -------------------OUTPUT
  */
 
-int kadaneAlgorithm(int *array) {
+#define MAX(a,b) (((a)>(b))?(a):(b))
+
+int kadaneAlgorithm(int *array, int arraySize) {
+    int maxEndingHere = array[0];
+    int maxSoFar = array[0];
     
-    return 0;
+    for (int array_i = 1; array_i < arraySize; array_i++) {
+        maxEndingHere = MAX(array[array_i],maxEndingHere + array[array_i]);
+        maxSoFar = MAX(maxSoFar,maxEndingHere);
+    }
+    return maxSoFar;
 }
 
 int main() {
@@ -52,7 +60,7 @@ int main() {
             maximumNonContiguousSum = maxNumber;
         }
         
-        int maximumContiguousSum = kadaneAlgorithm(array);
+        int maximumContiguousSum = kadaneAlgorithm(array,arrayLength);
         
         printf("%d %d\n",maximumContiguousSum, maximumNonContiguousSum);
     }

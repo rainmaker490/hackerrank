@@ -10,7 +10,7 @@
 - [Sorting](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Sorting)
 - Search
 - [Graph Theory](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Graph%20Theory)
-- Greedy
+- [Greedy](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Greedy)
 - [Dynamic Programming](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Dynamic%20Programming)
 - Constructive Algorithms
 - Bit Manipulation

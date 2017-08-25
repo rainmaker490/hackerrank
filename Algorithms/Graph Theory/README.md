@@ -4,4 +4,4 @@
 
 ## Algorithms: (Current Percentile : [84th](https://www.hackerrank.com/varun4))
 
-- [Roads and Libraries](https://github.com/rainmaker490/hackerrank/tree/readme/Algorithms/Graph%20Theory)
+- [Roads and Libraries](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Graph%20Theory)

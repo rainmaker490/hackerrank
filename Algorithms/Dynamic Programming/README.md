@@ -4,6 +4,6 @@
 
 ## Algorithms: (Current Percentile : [84th](https://www.hackerrank.com/varun4))
 
-- [Equal](https://github.com/rainmaker490/hackerrank/blob/readme/Algorithms/Dynamic%20Programming/equal.c)
-- [The Coin Change Problem](https://github.com/rainmaker490/hackerrank/blob/readme/Algorithms/Dynamic%20Programming/theCoinChangeProblem.m)
-- [UNMEMOIZED -> The Coin Change Problem](https://github.com/rainmaker490/hackerrank/blob/readme/Algorithms/Dynamic%20Programming/unMemoizedTheCoinChangeProblem.c)
+- [Equal](https://github.com/rainmaker490/hackerrank/blob/master/Algorithms/Dynamic%20Programming/equal.c)
+- [The Coin Change Problem](https://github.com/rainmaker490/hackerrank/blob/master/Algorithms/Dynamic%20Programming/theCoinChangeProblem.m)
+- [UNMEMOIZED -> The Coin Change Problem](https://github.com/rainmaker490/hackerrank/blob/master/Algorithms/Dynamic%20Programming/unMemoizedTheCoinChangeProblem.c)

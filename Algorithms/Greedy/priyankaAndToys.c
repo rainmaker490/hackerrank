@@ -1,5 +1,5 @@
 //@author: Varun Patel
-//Priyanka And Toys
+//Priyanka and Toys
 #include <stdio.h>
 #include <string.h>
 #include <math.h>

@@ -24,25 +24,33 @@
 
 #define MAX(a,b) (((a)>(b))?(a):(b))
 void printLongestCommonSubstring(int **knapsackMatrix, int *firstInputString, int *secondInputString, int sizeOfFirstString, int sizeOfSecondString) {
-    //DEBUG: printf("%d ", knapsackMatrix[sizeOfSecondString][sizeOfFirstString])
-    int i = sizeOfSecondString;
+    //DEBUG:printf("\n\n\n");
+    int outputSize = knapsackMatrix[sizeOfSecondString-1][sizeOfFirstString];
+    int *printedOutput = calloc(outputSize,sizeof(int));
+    int i = sizeOfSecondString - 1;
     int j = sizeOfFirstString;
+    int currentWriteIndex = 0;
     //DEBUG: printf("%d ", knapsackMatrix[i][j])
     while(i > 0 && j > 0) {
-        if (knapsackMatrix[i][j] == knapsackMatrix[i][j-1]) {
+        if (knapsackMatrix[i][j] == knapsackMatrix[i-1][j]) {
+            i--;
+        }else if (knapsackMatrix[i][j] == knapsackMatrix[i][j-1]) {
             j--;
-        }else if (knapsackMatrix[i][j] == knapsackMatrix[i-1][j-1] + 1) {
-            if (knapsackMatrix[i][j] == knapsackMatrix[i-1][j]) {
-                //DEBUG: printf("%d \n", knapsackMatrix[i][j]);
-                i--;
-            } else  {
-                //DEBUG: printf("%d \n", knapsackMatrix[i][j]);
-                //DEBUG: printf("%d ", firstInputString[j]);
-                i--;
-                j--;
-            }
+        } else if (knapsackMatrix[i][j] == knapsackMatrix[i-1][j-1] + 1) {
+            printedOutput[currentWriteIndex] = firstInputString[j-1];
+            currentWriteIndex++;
+            //DEBUG:printf("%d ", firstInputString[j-1]);
+            //DEBUG:printf("(i:%d,j:%d)",i,j);
+            //DEBUG:printf("->%d \n", knapsackMatrix[i][j]);
+            //DEBUG: printf("%d ", firstInputString[j]);
+            i--;
+            j--;
         }
     }
+    for (int i = currentWriteIndex - 1; i >= 0 ; i--) {
+        printf("%d ", printedOutput[i]);
+    }
+    free(printedOutput);
 }
 
 int longestCommonSubsequenceCount(int *firstInputString, int *secondInputString, int sizeOfFirstString, int sizeOfSecondString) {
@@ -63,9 +71,9 @@ int longestCommonSubsequenceCount(int *firstInputString, int *secondInputString,
     //printf("\n");
     
     for (int i = 1; i < sizeOfSecondString; i++) {
-        printf("%d, ",secondInputString[i]);
+        //PRINT-MATRIX:printf("%d, ",secondInputString[i]);
         knapsackMatrix[i] = calloc(sizeOfFirstString+1,sizeof(int));
-        printf("%d ",knapsackMatrix[i][0]);
+        //PRINT-MATRIX:printf("%d ",knapsackMatrix[i][0]);
         for (int j = 1; j <= sizeOfFirstString; j++) {
             //DEBUG: printf("%d ",row[j]);
             knapsackMatrix[i][j] = MAX(knapsackMatrix[i-1][j],knapsackMatrix[i][j-1]);
@@ -79,12 +87,12 @@ int longestCommonSubsequenceCount(int *firstInputString, int *secondInputString,
         //PRINT-MATRIX: printf("\n");
     }
     
-    //printLongestCommonSubstring (knapsackMatrix,firstInputString,secondInputString,sizeOfFirstString,sizeOfSecondString);
+    printLongestCommonSubstring(knapsackMatrix,firstInputString,secondInputString,sizeOfFirstString,sizeOfSecondString);
     
     for (int j = 0; j <= sizeOfSecondString; j++){
-        //free(knapsackMatrix[j]);
+        free(knapsackMatrix[j]);
     }
-    //free(knapsackMatrix);
+    free(knapsackMatrix);
     return knapsackMatrix[sizeOfFirstString][sizeOfSecondString];
 }
 

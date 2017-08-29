@@ -1,5 +1,6 @@
 //@author: Varun Patel
 //The Longest Common Subsequence
+//A Non-Memoized C Solution:
 #include <stdio.h>
 #include <string.h>
 #include <math.h>

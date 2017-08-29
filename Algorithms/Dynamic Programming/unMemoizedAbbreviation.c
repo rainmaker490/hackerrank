@@ -1,5 +1,6 @@
 //@author: Varun Patel
 //Abbreviation
+//A Non-Memoized C Solution:
 #include <math.h>
 #include <stdio.h>
 #include <string.h>

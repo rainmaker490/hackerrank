@@ -13,13 +13,43 @@
  123
 */
 
+/*
+      i
+      a b c
+j   0 0 0 0
+  b 0 0 1 0
+  a 0 1 1
+  c 0
+ */
+#define MAX(a,b) (((a)>(b))?(a):(b))
+
+char* findSubstring(int **knapsackMatrix, char *firstInputString, char *secondInputString) {
+    char *longestCommonSubString = malloc(sizeof(char)*knapsackMatrix[strlen(secondInputString)][strlen(firstInputString)]);
+    
+    
+    
+    return longestSubstring;
+}
+
 char* longestCommonSubsequence(char *firstInputString, char *secondInputString) {
-    int **knapsackMatrix = calloc(strlen(secondInputString),sizeof(int*));
-    knapsackMatrix[0] = calloc(firstInputString,sizeof(int));
-    for (int i = 1; i <= firstInputString; i++) {
-        
+    int **knapsackMatrix = calloc(strlen(secondInputString)+1,sizeof(int*));
+    knapsackMatrix[0] = calloc(firstInputString+1,sizeof(int));
+    for (int i = 1; i <= strlen(secondInputString); i++) {
+        int *row = calloc(firstInputString+1,sizeof(int));
+        knapsackMatrix[i] = row;
+        for (int j = 1; j <= strlen(secondInputString); j++) {
+            row[j] = MAX(knapsackMatrix[i-1][j],knapsackMatrix[j-1][i])
+            if (firstInputString[i - 1] == secondInputString[j - 1]) {
+                row[j]++;
+            }
+        }
     }
-    return NULL;
+    char *longestSubstring = findSubstring(knapsackMatrix,firstInputString,secondInputString);
+    for (int j = 0; j <= strlen(secondInputString); j++){
+        free(knapsackMatrix[j]);
+    }
+    free(knapsackMatrix);
+    return longestSubstring;
 }
 
 int main() {

@@ -15,10 +15,19 @@
  --------------->
  36
  */
-
-int getMaximumCost(int *masterArray) {
-    
-    return 0;
+#define MAX(a,b) (((a)>(b))?(a):(b))
+int getMaximumCost(int *masterArray, int arrayLength) {
+    int high = 0, low = 0;
+    for (int i = 1; i < arrayLength; i++) {
+        int highToLow = abs(masterArray[i-1] - 1);
+        int lowToHigh = abs(masterArray[i] - 1);
+        int highToHigh = abs(masterArray[i] - masterArray[i-1]);
+        int lowCopy = low;
+        int highCopy = high;
+        low = MAX(lowCopy,highCopy+highToLow);
+        high = MAX(highCopy+highToHigh,lowCopy+lowToHigh);
+    }
+    return MAX(high,low);
 }
 
 int main() {
@@ -31,7 +40,7 @@ int main() {
         for (int j = 0; j < arrayLength; j++) {
             scanf("%d", &masterArray[j]);
         }
-        printf("%d\n", getMaximumCost(masterArray));
+        printf("%d\n", getMaximumCost(masterArray, arrayLength));
         free(masterArray);
     }
     return 0;

@@ -2,7 +2,7 @@
 ###### [Hackerrank Varun Patel Public Profile](https://www.hackerrank.com/varun4)
 [![N|Solid](https://d3keuzeb2crhkn.cloudfront.net/hackerrank/assets/brand/wordmark_sm.svg)](https://www.hackerrank.com/varun4)
 
-## Algorithms Track : (Current Percentile : [84th](https://www.hackerrank.com/varun4))
+## Algorithms Track : (Current Percentile : [92nd](https://www.hackerrank.com/varun4))
 
 - [Warmup](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Warmup)
 - [Implementation](https://github.com/rainmaker490/hackerrank/tree/master/Algorithms/Implementation)
@@ -17,6 +17,10 @@
 - Recursion
 - Game Theory
 - NP Complete
+
+## Data Structures Track:
+- Arrays
+- Linked Lists
 
 ### Running C Solutions 
 ```

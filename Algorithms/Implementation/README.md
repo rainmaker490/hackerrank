@@ -1,7 +1,7 @@
 # Implementation Solutions by Varun Patel
 ###### [Hackerrank Varun Patel Public Profile](https://www.hackerrank.com/varun4)
 
-## Algorithms: (Current Percentile : [84th](https://www.hackerrank.com/varun4))
+## Algorithms: (Current Percentile : [92nd](https://www.hackerrank.com/varun4))
 
 - [Grading Students](https://github.com/rainmaker490/hackerrank/blob/master/Algorithms/Implementation/gradingStudents.c)
 - [Apple and Orange](https://github.com/rainmaker490/hackerrank/blob/master/Algorithms/Implementation/appleAndOrange.c)

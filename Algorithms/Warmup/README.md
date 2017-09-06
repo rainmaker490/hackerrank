@@ -1,7 +1,7 @@
 # Algorithms Solutions by Varun Patel
 ###### [Hackerrank Varun Patel Public Profile](https://www.hackerrank.com/varun4)
 
-## Algorithms: (Current Percentile : [84th](https://www.hackerrank.com/varun4))
+## Algorithms: (Current Percentile : [92nd](https://www.hackerrank.com/varun4))
 
 - [Solve Me First](https://github.com/rainmaker490/hackerrank/blob/master/Algorithms/Warmup/solveMeFirst.m)
 - [Simple Array Sum](https://github.com/rainmaker490/hackerrank/blob/master/Algorithms/Warmup/simpleArraySum.c)

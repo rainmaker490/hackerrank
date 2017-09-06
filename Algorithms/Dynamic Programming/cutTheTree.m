@@ -28,17 +28,27 @@
  The nodes aren't connected.
  */
 
+
+int cutTheTree(NSDictionary *edges) {
+    [edges enumerateKeysAndObjectsWithBlock:^() {
+        
+    }];
+    return 0;
+}
+
 int main(int argc, const char * argv[]) {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     
     int nodes, edgesQuery;
     scanf("%d %d", &nodes, &edgesQuery);
-    NSMutableArray *edges = [NSMutableArray array];
+    NSMutableDictionary *edges = [NSMutableDictionary dictionary];
     
     int beginning, end;
     for(int i = 0; i < nodes - 1; i++) {
         scanf("%d %d", &beginning, &end);
+        
     }
+    printf("%d",cutTheTree([edges copy]));
     
     [pool drain];
     return 0;

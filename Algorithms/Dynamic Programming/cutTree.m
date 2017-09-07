@@ -1,8 +1,7 @@
 //@author: Varun Patel
-//Cut the Tree
+//Cut Tree
 //Objective C Solution
 #import <Foundation/Foundation.h>
-
 /*
  3 1
  2 1
@@ -26,6 +25,38 @@
  sample test-case {1,3} isn't valid because, 
  well, it's not a sub-tree. 
  The nodes aren't connected.
+ */
+
+
+/*
+ Adjacency List :
+ 1: 2
+ 2: 1 , 3
+ 3: 2
+ 
+ [1] -> check self, how many edges? If edges == K, then count ++ …….. (1)
+ 
+ Iterate :
+ 1 -> 2 (correct K count)!  **Mark 1 as visited**
+ subtree 2-> count how many subtrees rooted at 2! {
+	2 -> 1 **** already visited, skip
+	2 -> 3 (count ++)…………………………………………………………………..(2)
+ }
+ 
+ [2] -> check self, how many edges? If edges == K, then count++.  …….. (3)
+ 2 -> 1 **** already visited, skip
+ 2 ->3 (correct K count)!  **Mark 2 as visited**
+ subtree 3-> count how many subtrees rooted at 3! {
+	3 -> 2 **** already visited, skip
+	return 0 count (is leaf)
+ }
+ 
+ [3] -> check self, how many edges? If edges == K, then count++. …….. (4)
+ Mark 3 Visited!
+ 3 -> 2 **** already visited, skip
+ Return 1
+ 
+ Program return 4 + 1 since {} is also a solution (See other solutions for answer to this)
  */
 
 

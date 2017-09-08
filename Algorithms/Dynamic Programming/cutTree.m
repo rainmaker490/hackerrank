@@ -59,9 +59,9 @@
  */
 
 int cutTheTree(NSDictionary *edges) {
-    [edges enumerateKeysAndObjectsWithBlock:^() {
-        
-    }];
+    //[edges enumerateKeysAndObjectsWithBlock:^() {
+    
+    //}];
     return 0;
 }
 
@@ -73,8 +73,20 @@ int main(int argc, const char * argv[]) {
     NSMutableDictionary *edges = [NSMutableDictionary dictionary];
     
     int beginning, end;
+    NSMutableArray *visited = [NSMutableArray arrayWithCapacity:nodes+1];
+    NSMutableArray *adjacencyLists = [NSMutableArray arrayWithCapacity:nodes+1];
+    
+    for (int i = 0; i <= nodes; i++) {
+        adjacencyLists[i] = [NSMutableArray array];
+        visited[i] = @NO;
+    }
+    
     for(int i = 0; i < nodes - 1; i++) {
         scanf("%d %d", &beginning, &end);
+        NSMutableArray *beginningList = adjacencyLists[beginning];
+        NSMutableArray *endingList = adjacencyLists[end];
+        [beginningList addObject:@(end)];
+        [endingList addObject:@(beginning)];
         
     }
     printf("%d",cutTheTree([edges copy]));
@@ -82,4 +94,3 @@ int main(int argc, const char * argv[]) {
     [pool drain];
     return 0;
 }
-

@@ -27,7 +27,6 @@
  The nodes aren't connected.
  */
 
-
 /*
  Adjacency List :
  1: 2
@@ -58,7 +57,6 @@
  
  Program return 4 + 1 since {} is also a solution (See other solutions for answer to this)
  */
-
 
 int cutTheTree(NSDictionary *edges) {
     [edges enumerateKeysAndObjectsWithBlock:^() {
